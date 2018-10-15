@@ -50,7 +50,10 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     }
 }
 
+function updateSecondaryTile() {
 
+    
+}
 
 // TOAST
 
@@ -71,23 +74,23 @@ function showToastNotification(headerID, headerTitle, headerArguments, title, bo
 
     // Update the background image
     var images = toastXml.getElementsByTagName('image');
-        // 'Hero' image on top of notification
+    // 'Hero' image
     images[0].setAttribute('placement', "hero");
     images[0].setAttribute('src' , imageUrl);
-        // Inline image below notification
+    // Inline image
     images[1].setAttribute('src' , inlineImagePath);
-        // Icon image to the left.
+    // App Logo.
     images[2].setAttribute('placement', "appLogoOverride");
     images[2].setAttribute('hint-crop', "circle");
     images[2].setAttribute('src', iconImagePath);
-        // Badge image 
-
+       
+    // Header image 
     var header = toastXml.getElementsByTagName('header');
     header[0].setAttribute('id', headerID);
     header[0].setAttribute('title', headerTitle); 
     header[0].setAttribute('arguments', headerArguments);
     
-    // Set notification texts
+    // notification texts for Title & Body
     var textNodes = toastXml.getElementsByTagName('text');
     textNodes[0].innerText = title;
     textNodes[1].innerText = body;
