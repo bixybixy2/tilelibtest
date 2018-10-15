@@ -5,7 +5,7 @@ function PinSecondaryTile()
     var text = "Text";
     var activationArguments = "myargument";
     var tileId = "12345";
-    var logoUri = "http://www.pngall.com/wp-content/uploads/2016/04/Banana-PNG.png";
+    var logoUri = "pngall.com/wp-content/uploads/2016/04/Banana-PNG.png";
     var uriSmallLogo = "";
 
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
