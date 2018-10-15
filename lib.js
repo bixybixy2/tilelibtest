@@ -1,7 +1,10 @@
 
 // text - text to show secondary tile (required)
-// activationArguments - arguments used when app is opened through tile (required)
-function createSecondaryTile(text, activationArguments, tileId = null, logoUri = null, uriSmallLogo = null) {
+// activationArguments - arguments used when app is opened through tile
+// tileID - Unique ID that lets other functions change or unpin this tile (required)
+//logoURI - Image file path
+//uriSmallLogo - Image file path
+function createSecondaryTile(text, activationArguments = null, tileId, logoUri = null, uriSmallLogo = null) {
     if (!text || !activationArguments)
     {
         return;
