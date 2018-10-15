@@ -5,10 +5,10 @@ function PinSecondaryTile()
     var text = "Text";
     var activationArguments = "myargument";
     var tileId = "12345";
-    var logoUri = "http://www.pngall.com/wp-content/uploads/2016/04/Banana-PNG.png";
+    var logoUri = "";
     var uriSmallLogo = "";
 
-    createSecondaryTile(text, activationArguments)
+    createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 }
 
 function UpdateSecondaryTile()
@@ -16,10 +16,10 @@ function UpdateSecondaryTile()
     var text = "Banana";
     var activationArguments = "myargument";
     var tileId = "12345";
-    var logoUri = "";
+    var logoUri = "http://www.pngall.com/wp-content/uploads/2016/04/Banana-PNG.png";
     var uriSmallLogo = "";
 
-    createSecondaryTile(text, activationArguments)
+    createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 
 
 }
