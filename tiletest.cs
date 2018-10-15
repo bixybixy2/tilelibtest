@@ -1,6 +1,6 @@
 using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
-
+/*
 string from = "This is a Name";
 string subject = "this is a subject";
 string body = "this is a body";
@@ -28,3 +28,4 @@ XmlDocument doc = new XmlDocument();
 doc.LoadXml(content);
 
 var notification = new TileNotification(doc);
+*/
