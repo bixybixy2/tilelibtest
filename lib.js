@@ -1,4 +1,3 @@
-
 // text - text to show secondary tile (required)
 // activationArguments - arguments used when app is opened through tile
 // tileID - Unique ID that lets other functions change or unpin this tile (required)
@@ -11,7 +10,7 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     }
 
     var currentTime = new Date();
-    logoUri = logoUri || new Windows.Foundation.Uri("ms-appx:///images/Square150x150Logo.png");
+    logoUri = logoUri || new Windows.Foundation.Uri("https://i.imgur.com/8lE9Gmc.jpg");
     uriSmallLogo = uriSmallLogo || new Windows.Foundation.Uri("ms-appx:///images/Square44x44Logo.png");
     var newTileDesiredSize = Windows.UI.StartScreen.TileOptions.showNameOnLogo;
     tileId = tileId || activationArguments;
