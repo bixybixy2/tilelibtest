@@ -5,7 +5,7 @@ function PinSecondaryTile()
     var text = "Text";
     var activationArguments = "myargument";
     var tileId = "12345";
-    var logoUri = "https://i.imgur.com/8lE9Gmc.jpg";
+    var logoUri = "";
     var uriSmallLogo = "";
 
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)

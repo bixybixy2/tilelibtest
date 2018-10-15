@@ -10,7 +10,7 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     }
 
     var currentTime = new Date();
-    logoUri = logoUri || new Windows.Foundation.Uri("https://i.imgur.com/8lE9Gmc.jpg");
+    logoUri = logoUri || new Windows.Foundation.Uri("ms-appx:///images/Square150x150Logo.png");
     uriSmallLogo = uriSmallLogo || new Windows.Foundation.Uri("ms-appx:///images/Square44x44Logo.png");
     var newTileDesiredSize = Windows.UI.StartScreen.TileOptions.showNameOnLogo;
     tileId = tileId || activationArguments;
