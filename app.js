@@ -1,4 +1,4 @@
-
+Notification.requestPermission()
 
 function PinSecondaryTile()
 {
