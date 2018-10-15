@@ -5,7 +5,7 @@
 //logoURI - Image file path
 //uriSmallLogo - Image file path
 function createSecondaryTile(text, activationArguments = null, tileId, logoUri = null, uriSmallLogo = null) {
-    if (!text || !activationArguments)
+    if (!text || !tileId)
     {
         return;
     }
@@ -52,7 +52,7 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
 
 function updateSecondaryTile() {
 
-    
+
 }
 
 // TOAST
