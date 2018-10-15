@@ -1,14 +1,14 @@
-Notification.requestPermission()
+
 
 function PinSecondaryTile()
 {
     var text = "Text";
-    var activationArguments = "";
+    var activationArguments = "my argument";
     var tileId = "12345";
     var logoUri = "";
     var uriSmallLogo = "";
 
-    createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
+    createSecondaryTile(text, activationArguments)
 }
 
 function PopNotification()

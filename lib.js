@@ -1,4 +1,12 @@
+
+// text - text to show secondary tile (required)
+// activationArguments - arguments used when app is opened through tile (required)
 function createSecondaryTile(text, activationArguments, tileId = null, logoUri = null, uriSmallLogo = null) {
+    if (!text || !activationArguments)
+    {
+        return;
+    }
+
     var currentTime = new Date();
     logoUri = logoUri || new Windows.Foundation.Uri("ms-appx:///images/Square150x150Logo.png");
     uriSmallLogo = uriSmallLogo || new Windows.Foundation.Uri("ms-appx:///images/Square44x44Logo.png");
@@ -7,8 +15,7 @@ function createSecondaryTile(text, activationArguments, tileId = null, logoUri =
 
     var tile;
     try {
-        tile = new Windows.UI.StartScreen.SecondaryTile(tileId, text, text, activationArguments,
-            newTileDesiredSize, logoUri);
+        tile = new Windows.UI.StartScreen.SecondaryTile(tileId, text, text, activationArguments, newTileDesiredSize, logoUri);
     } catch (e) {
         //Utils.error('failed to create secondary tile', e);
         return;
@@ -40,7 +47,6 @@ function createSecondaryTile(text, activationArguments, tileId = null, logoUri =
     }
 }
 
-// document.addEventListener("DOMContentLoaded", createSecondaryTile, false);
 
 
 // TOAST
@@ -129,6 +135,7 @@ function uniToast(headerID, headerTitle, headerArguments, title, body, iconImage
     } 
     else
     {
+        Notification.requestPermission()
         var options = {body: body, image: heroImagePath}
         var notification = new Notification (title, options)
     }
