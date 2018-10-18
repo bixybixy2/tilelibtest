@@ -11,6 +11,10 @@ function PinSecondaryTile()
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 }
 
+function unpinSecondaryTile()
+    var tileID = "12345";
+    function removeSecondaryTile(tileId)
+
 function PopNotification()
 {
    var headerID = "12345"
