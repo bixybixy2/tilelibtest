@@ -49,9 +49,15 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     }
 }
 
-function updateSecondaryTile() {
-
-
+function UnpinSecondaryTile() {
+if (tile) {
+    tile.requestDeleteAsync().then(function (isDeleted) {
+        if (isDeleted) {
+           // Deleted 
+        } else {
+            // Not deleted
+        }
+    })};
 }
 
 // TOAST
