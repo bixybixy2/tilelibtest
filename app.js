@@ -11,7 +11,7 @@ function PinSecondaryTile()
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 }
 
-function unpinSecondaryTile()
+function UnpinSecondaryTile()
     var tileID = "12345";
     function removeSecondaryTile(tileId)
 
