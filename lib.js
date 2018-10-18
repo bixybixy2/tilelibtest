@@ -50,14 +50,17 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
 }
 
 function UnpinSecondaryTile() {
-if (tile) {
-    tile.requestDeleteAsync().then(function (isDeleted) {
-        if (isDeleted) {
-           // Deleted 
-        } else {
-            // Not deleted
-        }
-    })};
+// Specify the tile to be deleted, using the ID that it was given when it was originally created.
+var tileToBeDeleted = new Windows.UI.StartScreen.SecondaryTile("12345");
+
+// Make the delete request.
+tileToBeDeleted.requestDeleteAsync().then(function (isDeleted) {
+    if (isDeleted) {
+        // Secondary tile successfully deleted.
+    } else {
+        // Secondary tile not deleted.
+    }
+});
 }
 
 // TOAST
