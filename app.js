@@ -24,7 +24,7 @@ function UpdateSecondaryTile()
 
 function UnpinSecondaryTile(){
     var tileId = "12345";
-    function removeSecondaryTile(tileId)
+    removeSecondaryTile(tileId);
 }
 
 function PopNotification()
