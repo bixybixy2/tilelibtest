@@ -47,6 +47,6 @@ function PopNotification()
 
 function CheckPin(tileId)
 {
-    var isPinned = Windows.UI.StartScreen.SecondaryTile.Exists(tileId);
+    var isPinned = Windows.UI.StartScreen.SecondaryTile.exists(tileId);
     console.log(isPinned);
 }
