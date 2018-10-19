@@ -11,6 +11,17 @@ function PinSecondaryTile()
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 }
 
+function UpdateSecondaryTile()
+{
+    var text = "Wack";
+    var activationArguments = "myargument";
+    var tileId = "12345";
+    var logoUri = "";
+    var uriSmallLogo = "";
+
+    createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
+}
+
 function UnpinSecondaryTile(){
     var tileId = "12345";
     function removeSecondaryTile(tileId)
