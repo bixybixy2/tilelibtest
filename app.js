@@ -44,3 +44,9 @@ function PopNotification()
 
     uniToast(headerID, headerTitle, headerArguments, title, body, iconImagePath, badgeImagePath, heroImagePath, inlineImagePath, buttonName, buttonType, buttonArguments);
 }
+
+function CheckPin(tileId)
+{
+    var isPinned = Windows.UI.StartScreen.SecondaryTile.Exists(tileId);
+    console.log(isPinned);
+}
