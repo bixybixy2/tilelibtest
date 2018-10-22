@@ -42,5 +42,4 @@ function CheckPin(tileId)
 /*
 new Windows.UI.StartScreen.SecondaryTile()
 
-
 */

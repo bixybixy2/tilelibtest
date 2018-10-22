@@ -51,7 +51,6 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
         });
     }
 }
-
 function removeSecondaryTile(tileId) 
 {
     var selectionRect = element.getBoundingClientRect();
