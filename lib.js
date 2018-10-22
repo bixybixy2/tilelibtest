@@ -3,7 +3,8 @@
 // tileID - Unique ID that lets other functions change or unpin this tile (required)
 //logoURI - Image file path
 //uriSmallLogo - Image file path
-function createSecondaryTile(text, activationArguments = null, tileId, logoUri = null, uriSmallLogo = null) {
+function createSecondaryTile(text, activationArguments = null, tileId, logoUri = null, uriSmallLogo = null) 
+{
     if (!text || !tileId)
     {
         return;
@@ -16,14 +17,16 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     tileId = tileId || activationArguments;
 
     var tile;
-    try {
+    try 
+    {
         tile = new Windows.UI.StartScreen.SecondaryTile(tileId, text, text, activationArguments, newTileDesiredSize, logoUri);
     } catch (e) {
         //Utils.error('failed to create secondary tile', e);
         return;
     }
     var element = document.body;
-    if (element) {
+    if (element) 
+    {
         var selectionRect = element.getBoundingClientRect();
         var buttonCoordinates = { x: selectionRect.left, y: selectionRect.top, width: selectionRect.width, height: selectionRect.height };
         var placement = Windows.UI.Popups.Placement.above;
@@ -49,22 +52,34 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
     }
 }
 
-function removeSecondaryTile(tileId) {
-// Specify the tile to be deleted, using the ID that it was given when it was originally created.
-var tileToBeDeleted = new Windows.UI.StartScreen.SecondaryTile(tileId);
-
-// Make the delete request.
-tileToBeDeleted.requestDeleteAsync().then(function (isDeleted) {
-    if (isDeleted) {
-        // Secondary tile successfully deleted.
-    } else {
-        // Secondary tile not deleted.
-    }
-});
+function removeSecondaryTile(tileId) 
+{
+    var selectionRect = element.getBoundingClientRect();
+    var buttonCoordinates = { x: selectionRect.left, y: selectionRect.top, width: selectionRect.width, height: selectionRect.height };
+    var placement = Windows.UI.Popups.Placement.above;
+    var tileToBeDeleted = new Windows.UI.StartScreen.SecondaryTile(tileId);
+    // Make the delete request.
+    tileToBeDeleted.requestDeleteForSelectionAsync(buttonCoordinates, placement).then(function (isDeleted) {
+        if (isDeleted) {
+            // Secondary tile successfully deleted.
+        } else {
+            // Secondary tile not deleted.
+        }
+    });
 }
 
-// TOAST
+function updateSecondaryTile(tileID)
+{
 
+
+}
+
+
+
+
+
+
+// TOAST
 
 function showToastNotification(headerID, headerTitle, headerArguments, title, body, iconImagePath, badgeImagePath, heroImagePath, inlineImagePath, buttonName, buttonType, buttonArguments) {
 // Original Code

@@ -11,17 +11,6 @@ function PinSecondaryTile()
     createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
 }
 
-function UpdateSecondaryTile()
-{
-    var text = "Wack";
-    var activationArguments = "myargument";
-    var tileId = "12345";
-    var logoUri = "";
-    var uriSmallLogo = "";
-
-    createSecondaryTile(text, activationArguments, tileId, logoUri, uriSmallLogo)
-}
-
 function UnpinSecondaryTile(){
     var tileId = "12345";
     removeSecondaryTile(tileId);
@@ -50,3 +39,8 @@ function CheckPin(tileId)
     var isPinned = Windows.UI.StartScreen.SecondaryTile.exists(tileId);
     console.log(isPinned);
 }
+/*
+new Windows.UI.StartScreen.SecondaryTile()
+
+
+*/
