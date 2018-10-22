@@ -53,18 +53,22 @@ function createSecondaryTile(text, activationArguments = null, tileId, logoUri =
 }
 function removeSecondaryTile(tileId) 
 {
-    var selectionRect = element.getBoundingClientRect();
-    var buttonCoordinates = { x: selectionRect.left, y: selectionRect.top, width: selectionRect.width, height: selectionRect.height };
-    var placement = Windows.UI.Popups.Placement.above;
-    var tileToBeDeleted = new Windows.UI.StartScreen.SecondaryTile(tileId);
-    // Make the delete request.
-    tileToBeDeleted.requestDeleteForSelectionAsync(buttonCoordinates, placement).then(function (isDeleted) {
-        if (isDeleted) {
-            // Secondary tile successfully deleted.
-        } else {
-            // Secondary tile not deleted.
-        }
-    });
+    var element = document.body;
+    if (element) 
+    {
+        var selectionRect = element.getBoundingClientRect();
+        var buttonCoordinates = { x: selectionRect.left, y: selectionRect.top, width: selectionRect.width, height: selectionRect.height };
+        var placement = Windows.UI.Popups.Placement.above;
+        var tileToBeDeleted = new Windows.UI.StartScreen.SecondaryTile(tileId);
+        // Make the delete request.
+        tileToBeDeleted.requestDeleteForSelectionAsync(buttonCoordinates, placement).then(function (isDeleted) {
+            if (isDeleted) {
+                // Secondary tile successfully deleted.
+            } else {
+                // Secondary tile not deleted.
+            }
+        });
+    }
 }
 
 function updateSecondaryTile(tileID)
