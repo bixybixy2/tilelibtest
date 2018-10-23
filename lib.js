@@ -71,7 +71,7 @@ function removeSecondaryTile(tileId)
     }
 }
 
-function updateSecondaryTile(tileID)
+function updateSecondaryTile(tileId)
 {
     var tileToBeUpdated = new Windows.UI.StartScreen.SecondaryTile(tileId);
     var DisplayName = tileToBeUpdated.displayName;
