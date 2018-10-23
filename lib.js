@@ -77,7 +77,7 @@ function updateSecondaryTile(tileId)
     var DisplayName = tileToBeUpdated.displayName;
     console.log(DisplayName)
     DisplayName = "Test"
-    tileToBeUpdated.UpdateAsync(DisplayName)
+    tileToBeUpdated.updateAsync(DisplayName)
 }
 
 
