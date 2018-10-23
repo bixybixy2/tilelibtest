@@ -74,7 +74,10 @@ function removeSecondaryTile(tileId)
 function updateSecondaryTile(tileID)
 {
     var tileToBeUpdated = new Windows.UI.StartScreen.SecondaryTile(tileId);
-    tileToBeUpdated.UpdateAsync(DisplayName = "hello")
+    var DisplayName = tileToBeUpdated.displayName;
+    console.log(DisplayName)
+    DisplayName = "Test"
+    tileToBeUpdated.UpdateAsync(DisplayName)
 }
 
 
